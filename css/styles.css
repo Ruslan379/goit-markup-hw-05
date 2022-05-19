@@ -355,6 +355,7 @@ img {
     transform: translate(-50%, 0%);
     
     background-color: var(--color-background-backdrop);
+    z-index: 1
 
     }
 
