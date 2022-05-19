@@ -8,6 +8,7 @@
     --color-background-team: #F5F4FA;
     --color-background-footer: #2F303A;
     --color-background-footer-icon: rgba(255, 255, 255, 0.1);
+    --color-background-backdrop: rgba(0, 0, 0, 0.2);
     /* =============================== */
     --color-light: #FFFFFF;
     --color-dark: #000000;
@@ -259,7 +260,6 @@ img {
     transition-property: color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* transition-delay: 0; */
 }
 
 
@@ -343,6 +343,97 @@ img {
 .hero-button:focus {
     background-color: var(--color-button-hover);
 }
+
+/* ========================= Модалка ============================== */
+.backdrop {
+    position: fixed;
+    width: 1600px;
+    height: 1024px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+    background-color: var(--color-background-backdrop);
+
+    }
+
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+    opacity: 0;
+
+    /* transform: translate(-50%, 50%); */
+
+    /* transform: scale(0); */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    
+    
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    min-height: 581px;
+    padding: 15px;
+
+    background-color: #fff;
+
+    /* transform: scale(1); */
+    /* transform: translate(-50%, -50%), scale(1); */
+    /* transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
+
+    opacity: 1;
+    transition-property: opacity;
+
+    /* transition-property: transform; */
+    
+    transition-duration: 1250ms;
+    /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    transition-timing-function: linear;
+}
+/* ================ Кнопка ЗАКРЫТЬ модалку ================= */
+.modal-icon-box {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+
+}
+
+.button-modal {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+
+    fill: var(--color-dark);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+
+    /* outline: 2px solid tomato;  */
+}
+
+
+
 
 /* _________________________  К О Н Е Ц   Блок-секции_1 ГЕРОЙ (hero) _________________________ */
 
@@ -532,9 +623,9 @@ img {
 
 
 .team-soc-item {
-        width: 44px;
-        height: 44px;
-    }
+    width: 44px;
+    height: 44px;
+}
 
     /* .team-soc-item+.team-soc-item {
         margin-left: 10px;
