@@ -261,7 +261,8 @@ img {
     color: var(--color-font-head);
     fill: currentColor;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     /* transition-property: color, fill;
     transition-duration: 250ms;
@@ -272,10 +273,8 @@ img {
 /* ====  Hover & Focus на ссылках и Контактах (почта и телефон) в header === */
 .nav-links:hover,
 .nav-links:focus,
-
- .header-contacts-link:hover,
- .header-contacts-link:focus {
-    
+.header-contacts-link:hover,
+.header-contacts-link:focus {
     color: var(--color-logo-links-hover);
     fill: var(--color-logo-links-hover);
 }
@@ -671,10 +670,11 @@ img {
 
         width: 100%;
         height: 100%;
-        border-radius: 50%;
 
         align-items: center;
         justify-content: center;
+
+        border-radius: 50%;
 
         /* background-size: contain; */
         /* background-color: rgb(242, 250, 171); */
@@ -687,7 +687,7 @@ img {
 
     
     .team-soc-link:hover,
-    .team-soc-link:hover {
+    .team-soc-link:focus {
         background-color: var(--color-logo-links-hover);
         fill: var(--color-light);
     }
@@ -715,18 +715,9 @@ img {
 }
 
 .clients-item {
-    display: flex;
-
     width: 170px;
     height: 92px;
-    padding: 16px 32px;
-    
-    justify-content: center;
-
-    border: 1px solid var(--color-border-clients);
-    border-radius: 4px;
-    
-    transition: border 2250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* display: flex; */
 
     /* УБРАТЬ */
     /* outline: 2px solid tomato; */
@@ -739,56 +730,32 @@ img {
     width: 100%;
     height: 100%;
 
-    /* border: 1px solid var(--color-border-clients);
+    justify-content: center;
+
+    padding: 16px 32px;
+
+    border: 1px solid var(--color-border-clients);
     border-radius: 4px;
     
-    transition: border 2250ms cubic-bezier(0.4, 0, 0.2, 1); */
-
-    /* align-items: center; */
-    /* justify-content: center; */
-
-    /* background-size: contain; */
-    /* background-color: rgb(242, 250, 171); */
-
-    /* fill: var(--color-border-clients); */
-
-    /* transition: fill 2250ms cubic-bezier(0.4, 0, 0.2, 1); */
-}
-
-.clients-soc-icon {
     fill: var(--color-border-clients);
     
-    transition: fill 2250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* УБРАТЬ */
+    /* outline: 2px solid tomato; */
+    /* background-color: tomato; */
+    /* background-color: rgb(242, 250, 171); */
+
 }
 
-/* .clients-item:hover,
-.clients-item:focus {
-    border: 5px solid var(--color-logo-links-hover);
-}
 
 .clients-link:hover,
 .clients-link:focus {
+    border: 1px solid var(--color-logo-links-hover);
     fill: var(--color-logo-links-hover);
-} */
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.clients-item:hover .clients-soc-icon,
-.clients-item:focus .clients-soc-icon {
-
-    fill: var(--color-logo-links-hover)
 }
 
-
-.clients-item:hover,
-.clients-item:focus {
-    border: 5px solid var(--color-logo-links-hover);
-}
-
-/* .clients-item:hover,
-.clients-item:focus {
-    border: 5px solid var(--color-logo-links-hover);
-} */
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* ___________________  К О Н Е Ц  Секции_5 Наши клиенты ______________________ */
 
@@ -850,10 +817,12 @@ img {
     background-color: var(--color-background-footer-icon);
 
     fill: var(--color-light);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footers-soc-link:hover,
-.footers-soc-link:hover {
+.footers-soc-link:focus {
     background-color: var(--color-logo-links-hover);
 }
 
@@ -886,7 +855,10 @@ img {
 .footers-contact-link {
     font-style: normal;
     line-height: 1.71;
+
     color: var(--color-font-footer);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ======== Ститлизация текста в блоке СОЦСЕТИ (footers-soc)========== */
@@ -903,9 +875,9 @@ img {
 
 /* ======  Hover & Focus на ссылках (почта и телефон) в footer ===== */
 .footers-contact-link:hover,
-.footers-contact-link:focus
-
-{color: var(--color-logo-links-hover);}
+.footers-contact-link:focus {
+    color: var(--color-logo-links-hover);
+}
 
 
 /* Применить mpadding-bottom: 20px к элементу LOGO */
@@ -964,13 +936,14 @@ img {
     
     border: 1px solid transparent;
     border-radius: 4px;
-    /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
-                0px 1px 2px rgba(0, 0, 0, 0.08), 
-                0px 2px 2px rgba(0, 0, 0, 0.12);
-     */
-
+    
     color: inherit;
     background-color: var(--color-background-team);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
@@ -981,13 +954,13 @@ img {
 }
 
 /* =====  Hover & Focus на кнопках в ГЕРОЙ-ССЫЛКИ в (btn-filters) в portfolio.html ===== */
-.btn-filters.activlink:hover,
-.btn-filters.activlink:focus,
+/* .btn-filters.activlink:hover,
+.btn-filters.activlink:focus, */
 
 .btn-filters:hover,
 .btn-filters:focus {
-    background-color: var(--color-logo-links-hover);
     color: var(--color-light);
+    background-color: var(--color-logo-links-hover);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
                 0px 1px 2px rgba(0, 0, 0, 0.08),
                 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1028,6 +1001,8 @@ img {
     flex-basis: calc(100% / 3 - 30px);
     /* flex-basis: calc((100% - 90px) / 3); */
     margin: 15px;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 /* ____________________________________________________________________
 
